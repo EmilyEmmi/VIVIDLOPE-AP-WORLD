@@ -30,5 +30,5 @@ Only items in the shop have a visual appearance, and appear as a stylised versio
 You will get a popup message when you receive/send an item. Note that some popups may not display due to loading screens or other factors.
 
 ## Credits
-This apworld was developed by me (EmilyEmmi) and redpenguiin. Hanna/Murioz commissioned me and came up with the design for this randomizer.
+This apworld was developed by me (EmilyEmmi) and redpenguiin. Hanna/Murioz commissioned me and came up with the design for this randomizer, and also made the graphic of the Archipelago logo used in shops.
 The VIVIDLOPE AP mod was developed by me (EmilyEmmi), with Vintagix generously giving me permission to use the in-game DELTARUNE client as a basis for Archipelago support.
