@@ -96,8 +96,10 @@ class VividlopeWorld(World):
 
             # Don't run for excluded levels
             if (orig_stage.level == 11 and self.options.exclude_finale and self.options.goal_condition != 0):
+                stage_index += 1
                 continue
             if (orig_stage.level == 10 and self.options.exclude_level_x and self.options.goal_condition != 1):
+                stage_index += 1
                 continue
 
             location_names = []

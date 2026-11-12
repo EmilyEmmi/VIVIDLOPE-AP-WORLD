@@ -189,6 +189,7 @@ def attach_shuffled_levels(world: VividlopeWorld):
     for level in range(0, 10):
         # Don't create locations for Level X if excluded and not goal
         if level == 9 and world.options.exclude_level_x and world.options.goal_condition != 1:
+            stage_index += 15
             continue
 
         # Define event item for later
