@@ -74,6 +74,8 @@ class VividlopeWorld(World):
         # Add stage shuffle order to slot data
         if (self.options.stage_shuffle):
             slot_data["stage_shuffle_order"] = self.stage_shuffle_order
+        
+        slot_data["starting_level"] = self.starting_level
         return slot_data
 
     # Display actual stage location in hints

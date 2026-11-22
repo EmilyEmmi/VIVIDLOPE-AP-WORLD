@@ -190,7 +190,7 @@ def get_random_filler_item_name(world: VividlopeWorld) -> str:
         ItemNames.good_shoes_filler,
         ItemNames.extra_life_filler, # Might be too common?
     ]
-    return filler[random]
+    return str(filler[random])
 
 def create_item_with_correct_classification(world: VividlopeWorld, name: str) -> VividlopeItem:
     classification = DEFAULT_ITEM_CLASSIFICATIONS[name]
@@ -198,59 +198,59 @@ def create_item_with_correct_classification(world: VividlopeWorld, name: str) ->
 
 def create_all_items(world: VividlopeWorld) -> None:
     itempool: list[Item] = [
-        world.create_item(ItemNames.impact_unlock),
-        world.create_item(ItemNames.dash_unlock),
-        world.create_item(ItemNames.stamp_unlock),
-        world.create_item(ItemNames.wrap_unlock),
-        world.create_item(ItemNames.balloon_unlock),
-        world.create_item(ItemNames.burst_unlock),
-        world.create_item(ItemNames.bomb_unlock),
-        world.create_item(ItemNames.insta_unlock),
-        world.create_item(ItemNames.superjump_unlock),
-        world.create_item(ItemNames.max_power_unlock),
-        world.create_item(ItemNames.good_shoes_unlock),
+        world.create_item(str(ItemNames.impact_unlock)),
+        world.create_item(str(ItemNames.dash_unlock)),
+        world.create_item(str(ItemNames.stamp_unlock)),
+        world.create_item(str(ItemNames.wrap_unlock)),
+        world.create_item(str(ItemNames.balloon_unlock)),
+        world.create_item(str(ItemNames.burst_unlock)),
+        world.create_item(str(ItemNames.bomb_unlock)),
+        world.create_item(str(ItemNames.insta_unlock)),
+        world.create_item(str(ItemNames.superjump_unlock)),
+        world.create_item(str(ItemNames.max_power_unlock)),
+        world.create_item(str(ItemNames.good_shoes_unlock)),
 
-        world.create_item(ItemNames.shop_upgrade),
-        world.create_item(ItemNames.shop_upgrade),
-        world.create_item(ItemNames.shop_upgrade),
-        world.create_item(ItemNames.shop_upgrade),
-        world.create_item(ItemNames.shop_upgrade),
+        world.create_item(str(ItemNames.shop_upgrade)),
+        world.create_item(str(ItemNames.shop_upgrade)),
+        world.create_item(str(ItemNames.shop_upgrade)),
+        world.create_item(str(ItemNames.shop_upgrade)),
+        world.create_item(str(ItemNames.shop_upgrade)),
 
-        world.create_item(ItemNames.attire_1.value),
-        world.create_item(ItemNames.attire_2.value),
-        world.create_item(ItemNames.attire_3.value),
-        world.create_item(ItemNames.attire_4.value),
-        world.create_item(ItemNames.attire_5.value),
-        world.create_item(ItemNames.attire_6.value),
-        world.create_item(ItemNames.attire_7.value),
-        world.create_item(ItemNames.attire_8.value),
-        world.create_item(ItemNames.attire_9.value),
-        world.create_item(ItemNames.attire_10.value),
-        world.create_item(ItemNames.attire_11.value),
-        world.create_item(ItemNames.attire_12.value),
-        world.create_item(ItemNames.attire_13.value),
-        world.create_item(ItemNames.attire_14.value),
-        world.create_item(ItemNames.attire_15.value),
-        world.create_item(ItemNames.attire_16.value),
-        world.create_item(ItemNames.attire_17.value),
-        world.create_item(ItemNames.attire_18.value),
-        world.create_item(ItemNames.attire_19.value),
-        world.create_item(ItemNames.attire_20.value),
-        world.create_item(ItemNames.attire_21.value),
-        world.create_item(ItemNames.attire_22.value),
-        world.create_item(ItemNames.attire_23.value),
-        world.create_item(ItemNames.attire_24.value),
-        world.create_item(ItemNames.attire_25.value),
+        world.create_item(str(ItemNames.attire_1)),
+        world.create_item(str(ItemNames.attire_2)),
+        world.create_item(str(ItemNames.attire_3)),
+        world.create_item(str(ItemNames.attire_4)),
+        world.create_item(str(ItemNames.attire_5)),
+        world.create_item(str(ItemNames.attire_6)),
+        world.create_item(str(ItemNames.attire_7)),
+        world.create_item(str(ItemNames.attire_8)),
+        world.create_item(str(ItemNames.attire_9)),
+        world.create_item(str(ItemNames.attire_10)),
+        world.create_item(str(ItemNames.attire_11)),
+        world.create_item(str(ItemNames.attire_12)),
+        world.create_item(str(ItemNames.attire_13)),
+        world.create_item(str(ItemNames.attire_14)),
+        world.create_item(str(ItemNames.attire_15)),
+        world.create_item(str(ItemNames.attire_16)),
+        world.create_item(str(ItemNames.attire_17)),
+        world.create_item(str(ItemNames.attire_18)),
+        world.create_item(str(ItemNames.attire_19)),
+        world.create_item(str(ItemNames.attire_20)),
+        world.create_item(str(ItemNames.attire_21)),
+        world.create_item(str(ItemNames.attire_22)),
+        world.create_item(str(ItemNames.attire_23)),
+        world.create_item(str(ItemNames.attire_24)),
+        world.create_item(str(ItemNames.attire_25)),
 
-        world.create_item(ItemNames.flowers.value),
-        world.create_item(ItemNames.paint_rollers.value),
-        world.create_item(ItemNames.paint_buckets.value),
-        world.create_item(ItemNames.bubbles.value),
-        world.create_item(ItemNames.snowmen.value),
+        world.create_item(str(ItemNames.flowers)),
+        world.create_item(str(ItemNames.paint_rollers)),
+        world.create_item(str(ItemNames.paint_buckets)),
+        world.create_item(str(ItemNames.bubbles)),
+        world.create_item(str(ItemNames.snowmen)),
     ]
 
     # Create shield unlock; possibly add it to your starting inventory
-    shield_item = world.create_item(ItemNames.shield_unlock)
+    shield_item = world.create_item(str(ItemNames.shield_unlock))
     if world.options.start_with_shield:
         world.push_precollected(shield_item)
     else:
@@ -270,7 +270,7 @@ def create_all_items(world: VividlopeWorld) -> None:
             offensive_items.pop()
 
         # Give one offensive item at random
-        world.multiworld.early_items[world.player][world.random.choice(offensive_items)] = 1
+        world.multiworld.early_items[world.player][str(world.random.choice(offensive_items))] = 1
 
     # Give the player a random level to start so they don't have 0 checks at the start of their game
     # We can only pick Level X as the starting level if Finale is our goal and it isn't excluded (Finale can never be the starting level)
@@ -278,6 +278,7 @@ def create_all_items(world: VividlopeWorld) -> None:
         random_starting_level = world.random.randint(0, 8)
     else:
         random_starting_level = world.random.randint(0, 9)
+    world.starting_level = random_starting_level
 
     for i in range(0, 11):
         # Skip creating the unlock for the goal world since we wont need it
@@ -318,7 +319,7 @@ def create_all_items(world: VividlopeWorld) -> None:
         trap_pool = []
         for i in range(trap_count):
             trap_item = world.random.choice(trap_weights)
-            trap_pool.append(world.create_item(trap_item))
+            trap_pool.append(world.create_item(str(trap_item)))
         itempool += trap_pool
 
     itempool += [world.create_filler() for _ in range(needed_number_of_filler_items)]
